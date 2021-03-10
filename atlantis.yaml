@@ -1,0 +1,16 @@
+version: 3
+projects:
+- name: instance1
+    dir: services/instance1
+    workflow: service
+    autoplan:
+    when_modified: ["modules/**/*.tf","*.tf"]
+    enabled: true
+
+workflows:
+service:
+    plan:
+    steps:
+    - init
+    - plan:
+        extra_args: ["-var-file", "/home/atlantis/tfvars/service.tfvars"]
