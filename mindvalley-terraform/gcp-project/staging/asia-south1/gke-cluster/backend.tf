@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "gke-cluster.tf"
+    bucket = "pratik-s3-testing-bucket"
     prefix = "gcp-project/staging/asia-south1/gke-cluster/"
   }
 }

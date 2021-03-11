@@ -39,7 +39,7 @@ data "google_compute_subnetwork" "subnetwork" {
 }
 
 module "gke" {
-  source                    = "https://github.com/terraform-google-modules/terraform-google-kubernetes-engine/tree/master/modules/private-cluster"
+  source                    = "terraform-google-modules/kubernetes-engine/google//modules/private-cluster"
   project_id                = var.project_id
   name                      = "${local.cluster_type}-cluster${var.cluster_name_suffix}"
   regional                  = true
