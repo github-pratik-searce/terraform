@@ -18,7 +18,7 @@
 	VPC configuration
  *****************************************/
 module "vpc" {
-  source                                 = "terraform-google-modules/network/google"
+  source                                 = "terraform-google-modules/network/google//modules/vpc"
   network_name                           = var.network_name
   auto_create_subnetworks                = var.auto_create_subnetworks
   routing_mode                           = var.routing_mode
@@ -33,7 +33,7 @@ module "vpc" {
 	Subnet configuration
  *****************************************/
 module "subnets" {
-  source           = "terraform-google-modules/network/google"
+  source           = "terraform-google-modules/network/google//modules/subnets"
   project_id       = var.project_id
   network_name     = module.vpc.network_name
   subnets          = var.subnets
@@ -44,11 +44,11 @@ module "subnets" {
 	Routes
  *****************************************/
 module "routes" {
-  source            = "terraform-google-modules/network/google"
+  source            = "terraform-google-modules/network/google//modules/routes"
   project_id        = var.project_id
   network_name      = module.vpc.network_name
   routes            = var.routes
-##  module_depends_on = [module.subnets.subnets]
+  module_depends_on = [module.subnets.subnets]
 }
 
 

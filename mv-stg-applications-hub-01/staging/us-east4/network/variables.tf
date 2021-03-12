@@ -24,6 +24,10 @@ variable "network_name" {
 # default = "vpc-us-east-4-01"
 }
 
+variable "region" {
+  description = "The region of the project"
+}
+
 variable "routing_mode" {
   type        = string
   default     = "GLOBAL"

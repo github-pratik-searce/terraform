@@ -1,5 +1,6 @@
 project_id = "searce-playground"
 network_name = "vpc-us-east-4-01"
+region = "us-east4"
 subnets = [
   {
     subnet_name           = "subnet-us-east-4-01-01"
@@ -26,14 +27,3 @@ secondary_ranges = {
     }
 
 
-routes = [
-
-        {
-            name                   = "mv-internet"
-            description            = "route through IGW to access internet"
-            destination_range      = "0.0.0.0/0"
-            tags                   = "egress-inet"
-            next_hop_internet      = "true"
-        }
-
-]
