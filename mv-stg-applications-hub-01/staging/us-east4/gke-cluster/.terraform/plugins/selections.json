@@ -1,0 +1,22 @@
+{
+  "registry.terraform.io/hashicorp/external": {
+    "hash": "h1:wbtDfLeawmv6xVT1W0w0fctRCb4ABlaD3JTxwb1jXag=",
+    "version": "2.1.0"
+  },
+  "registry.terraform.io/hashicorp/google": {
+    "hash": "h1:gwc5kBEa39CDDT9JhPQ+jxfnfqUCY7kUczNC/vi7dHQ=",
+    "version": "3.42.0"
+  },
+  "registry.terraform.io/hashicorp/kubernetes": {
+    "hash": "h1:whoGs/NeucMF8U/urPaeXdQUb+ppaO1Ae4r5aJRhfrU=",
+    "version": "1.13.3"
+  },
+  "registry.terraform.io/hashicorp/null": {
+    "hash": "h1:vpC6bgUQoJ0znqIKVFevOdq+YQw42bRq0u+H3nto8nA=",
+    "version": "3.1.0"
+  },
+  "registry.terraform.io/hashicorp/random": {
+    "hash": "h1:BZMEPucF+pbu9gsPk0G0BHx7YP04+tKdq2MrRDF1EDM=",
+    "version": "3.1.0"
+  }
+}
