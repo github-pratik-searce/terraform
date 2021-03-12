@@ -15,7 +15,7 @@
  */
 
 locals {
-  cluster_type = "simple-regional-private"
+  cluster_type = "gke-us-east4-applications-hub-01"
 }
 
 ##provider "google" {
@@ -52,16 +52,17 @@ module "gke" {
   service_account           = var.compute_engine_service_account
   enable_private_endpoint   = true
   enable_private_nodes      = true
-  master_ipv4_cidr_block    = "172.16.0.0/28"
+  master_ipv4_cidr_block    = "10.140.18.0/28"
   default_max_pods_per_node = 50
   remove_default_node_pool  = true
 
   node_pools = [
     {
-      name              = "pool-01"
+      name              = "pool-1"
       min_count         = 1
       max_count         = 2
       local_ssd_count   = 0
+      machine_type      = "n2-standard-2"
       disk_size_gb      = 100
       disk_type         = "pd-standard"
       image_type        = "COS"
@@ -72,10 +73,11 @@ module "gke" {
       max_pods_per_node = 12
     },
     {
-      name              = "pool-02"
-      min_count         = 1
-      max_count         = 2
+      name              = "pool-2"
+      min_count         = 2
+      max_count         = 4
       local_ssd_count   = 0
+      machine_type      = "n2-standard-2"
       disk_size_gb      = 100
       disk_type         = "pd-standard"
       image_type        = "COS"
@@ -85,6 +87,39 @@ module "gke" {
       preemptible       = false
       max_pods_per_node = 12
     },
+
+   {
+      name              = "pool-3"
+      min_count         = 1
+      max_count         = 2
+      local_ssd_count   = 0
+      machine_type      = "n2-standard-2"
+      disk_size_gb      = 100
+      disk_type         = "pd-standard"
+      image_type        = "COS"
+      auto_repair       = true
+      auto_upgrade      = true
+      service_account   = var.compute_engine_service_account
+      preemptible       = false
+      max_pods_per_node = 12
+    },
+
+{
+      name              = "pool-4"
+      min_count         = 2
+      max_count         = 4
+      local_ssd_count   = 0
+      machine_type      = "n2-standard-2"
+      disk_size_gb      = 100
+      disk_type         = "pd-standard"
+      image_type        = "COS"
+      auto_repair       = true
+      auto_upgrade      = true
+      service_account   = var.compute_engine_service_account
+      preemptible       = false
+      max_pods_per_node = 12
+    },
+
  
   ]
 

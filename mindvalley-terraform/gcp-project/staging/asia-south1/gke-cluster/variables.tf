@@ -16,6 +16,7 @@
 
 variable "project_id" {
   description = "The project ID to host the cluster in"
+  default = "searce-playground"
 }
 
 variable "cluster_name_suffix" {
@@ -25,25 +26,31 @@ variable "cluster_name_suffix" {
 
 variable "region" {
   description = "The region to host the cluster in"
+  default = "us-east4"
 }
 
 variable "network" {
   description = "The VPC network to host the cluster in"
+ default = "vpc-us-east-4-01"
 }
 
 variable "subnetwork" {
   description = "The subnetwork to host the cluster in"
+  default = "subnet-us-east-4-01-01"
 }
 
 variable "ip_range_pods" {
   description = "The secondary ip range to use for pods"
+  default = "pods-subnet"
 }
 
 variable "ip_range_services" {
   description = "The secondary ip range to use for services"
+  default = "svc-subnet"
 }
 
 variable "compute_engine_service_account" {
   description = "Service account to associate to the nodes in the cluster"
+  default = ""
 }
 
