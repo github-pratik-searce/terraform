@@ -25,11 +25,15 @@ output "client_token" {
 }
 
 ##output "ca_certificate" {
-  ##value = module.gke.ca_certificate
+##value = module.gke.ca_certificate
 ##}
 
-output "service_account" {
-  description = "The default service account used for running nodes."
-  value       = module.gke.service_account
-}
+##output "service_account" {
+##  description = "The default service account used for running nodes."
+##  value       = google_service_account.gke-service-account.email
+##}
 
+
+output "cidr_range" {
+  value = data.google_compute_subnetwork.subnetwork.ip_cidr_range
+}

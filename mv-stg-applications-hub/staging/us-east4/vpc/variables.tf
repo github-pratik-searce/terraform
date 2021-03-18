@@ -16,12 +16,12 @@
 
 variable "project_id" {
   description = "The ID of the project where this VPC will be created"
- # default = "searce-playground"
+  # default = "searce-playground"
 }
 
 variable "network_name" {
   description = "The name of the network being created"
-# default = "vpc-us-east-4-01"
+  # default = "vpc-us-east-4-01"
 }
 
 variable "region" {
@@ -43,14 +43,14 @@ variable "shared_vpc_host" {
 variable "subnets" {
   type        = list(map(string))
   description = "The list of subnets being created"
- # default = [{ subnet_name = "subnet-us-east-4-01-01", subnet_ip = "10.13.0.0/20", subnet_region="us-east4" }]
+  # default = [{ subnet_name = "subnet-us-east-4-01-01", subnet_ip = "10.13.0.0/20", subnet_region="us-east4" }]
 
 }
 
 variable "secondary_ranges" {
   type        = map(list(object({ range_name = string, ip_cidr_range = string })))
   description = "Secondary ranges that will be used in some of the subnets"
- # default     = {subnet-us-east-4-01-01=[{range_name="pods-subnet",ip_cidr_range="10.141.0.0/20"},{range_name="svc-subnet",ip_cidr_range="10.122.0.0/20"}]}
+  # default     = {subnet-us-east-4-01-01=[{range_name="pods-subnet",ip_cidr_range="10.141.0.0/20"},{range_name="svc-subnet",ip_cidr_range="10.122.0.0/20"}]}
 }
 
 variable "routes" {

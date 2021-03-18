@@ -1,0 +1,215 @@
+2021/03/18 07:10:44 [INFO] Terraform version: 0.13.1  
+2021/03/18 07:10:44 [INFO] Go runtime version: go1.14.7
+2021/03/18 07:10:44 [INFO] CLI args: []string{"/usr/local/bin/terraform", "plan"}
+2021/03/18 07:10:44 [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2021/03/18 07:10:44 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2021/03/18 07:10:44 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2021/03/18 07:10:44 [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2021/03/18 07:10:44 [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2021/03/18 07:10:44 [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2021/03/18 07:10:44 [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2021/03/18 07:10:44 [INFO] CLI command args: []string{"plan"}
+2021/03/18 07:10:44 [TRACE] Meta.Backend: built configuration for "gcs" backend with hash value 4096603948
+2021/03/18 07:10:44 [TRACE] Preserving existing state lineage "bdade786-e521-a05a-4ab5-909fac5418ed"
+2021/03/18 07:10:44 [TRACE] Preserving existing state lineage "bdade786-e521-a05a-4ab5-909fac5418ed"
+2021/03/18 07:10:44 [TRACE] Meta.Backend: working directory was previously initialized for "gcs" backend
+2021/03/18 07:10:44 [TRACE] Meta.Backend: using already-initialized, unchanged "gcs" backend configuration
+2021/03/18 07:10:44 [TRACE] Meta.Backend: instantiated backend of type *gcs.Backend
+2021/03/18 07:10:44 [TRACE] providercache.fillMetaCache: scanning directory .terraform/plugins
+2021/03/18 07:10:44 [TRACE] getproviders.SearchLocalDirectory: .terraform/plugins is a symlink to .terraform/plugins
+2021/03/18 07:10:44 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/external v2.1.0 for linux_amd64 at .terraform/plugins/registry.terraform.io/hashicorp/external/2.1.0/linux_amd64
+2021/03/18 07:10:44 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/google v3.42.0 for linux_amd64 at .terraform/plugins/registry.terraform.io/hashicorp/google/3.42.0/linux_amd64
+2021/03/18 07:10:44 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/kubernetes v1.13.3 for linux_amd64 at .terraform/plugins/registry.terraform.io/hashicorp/kubernetes/1.13.3/linux_amd64
+2021/03/18 07:10:44 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/null v3.1.0 for linux_amd64 at .terraform/plugins/registry.terraform.io/hashicorp/null/3.1.0/linux_amd64
+2021/03/18 07:10:44 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/random v3.1.0 for linux_amd64 at .terraform/plugins/registry.terraform.io/hashicorp/random/3.1.0/linux_amd64
+2021/03/18 07:10:44 [TRACE] providercache.fillMetaCache: including .terraform/plugins/registry.terraform.io/hashicorp/google/3.42.0/linux_amd64 as a candidate package for registry.terraform.io/hashicorp/google 3.42.0
+2021/03/18 07:10:44 [TRACE] providercache.fillMetaCache: including .terraform/plugins/registry.terraform.io/hashicorp/kubernetes/1.13.3/linux_amd64 as a candidate package for registry.terraform.io/hashicorp/kubernetes 1.13.3
+2021/03/18 07:10:44 [TRACE] providercache.fillMetaCache: including .terraform/plugins/registry.terraform.io/hashicorp/null/3.1.0/linux_amd64 as a candidate package for registry.terraform.io/hashicorp/null 3.1.0
+2021/03/18 07:10:44 [TRACE] providercache.fillMetaCache: including .terraform/plugins/registry.terraform.io/hashicorp/random/3.1.0/linux_amd64 as a candidate package for registry.terraform.io/hashicorp/random 3.1.0
+2021/03/18 07:10:44 [TRACE] providercache.fillMetaCache: including .terraform/plugins/registry.terraform.io/hashicorp/external/2.1.0/linux_amd64 as a candidate package for registry.terraform.io/hashicorp/external 2.1.0
+2021/03/18 07:10:44 [TRACE] providercache.fillMetaCache: using cached result from previous scan of .terraform/plugins
+2021/03/18 07:10:45 [TRACE] providercache.fillMetaCache: using cached result from previous scan of .terraform/plugins
+2021/03/18 07:10:45 [TRACE] providercache.fillMetaCache: using cached result from previous scan of .terraform/plugins
+2021/03/18 07:10:45 [TRACE] providercache.fillMetaCache: using cached result from previous scan of .terraform/plugins
+2021/03/18 07:10:45 [DEBUG] checking for provisioner in "."
+2021/03/18 07:10:45 [DEBUG] checking for provisioner in "/usr/local/bin"
+2021/03/18 07:10:45 [INFO] Failed to read plugin lock file .terraform/plugins/linux_amd64/lock.json: open .terraform/plugins/linux_amd64/lock.json: no such file or directory
+2021/03/18 07:10:45 [TRACE] Meta.Backend: backend *gcs.Backend does not support operations, so wrapping it in a local backend
+2021/03/18 07:10:45 [INFO] backend/local: starting Plan operation
+2021/03/18 07:10:45 [TRACE] backend/local: requesting state manager for workspace "default"
+2021/03/18 07:10:46 [TRACE] backend/local: requesting state lock for workspace "default"
+2021/03/18 07:10:46 [TRACE] backend/local: reading remote state for workspace "default"
+2021/03/18 07:10:47 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2021/03/18 07:10:47 [TRACE] backend/local: building context for current working directory
+2021/03/18 07:10:47 [DEBUG] backend/local: will prompt for input of unset required variables [compute_engine_service_account]
+2021/03/18 07:10:47 [DEBUG] command: asking for input: "var.compute_engine_service_account"
+2021/03/18 07:11:00 [TRACE] terraform.NewContext: starting
+2021/03/18 07:11:00 [TRACE] terraform.NewContext: loading provider schemas
+2021/03/18 07:11:00 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/external"
+2021-03-18T07:11:00.691Z [INFO]  plugin: configuring client automatic mTLS
+2021-03-18T07:11:00.735Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/external/2.1.0/linux_amd64/terraform-provider-external_v2.1.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/external/2.1.0/linux_amd64/terraform-provider-external_v2.1.0_x5]
+2021-03-18T07:11:00.736Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/external/2.1.0/linux_amd64/terraform-provider-external_v2.1.0_x5 pid=2932
+2021-03-18T07:11:00.736Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/external/2.1.0/linux_amd64/terraform-provider-external_v2.1.0_x5
+2021-03-18T07:11:00.743Z [INFO]  plugin.terraform-provider-external_v2.1.0_x5: configuring server automatic mTLS: timestamp=2021-03-18T07:11:00.743Z
+2021-03-18T07:11:00.797Z [DEBUG] plugin.terraform-provider-external_v2.1.0_x5: plugin address: address=/tmp/plugin190224421 network=unix timestamp=2021-03-18T07:11:00.797Z
+2021-03-18T07:11:00.797Z [DEBUG] plugin: using plugin: version=5
+2021/03/18 07:11:00 [TRACE] GRPCProvider: GetSchema
+2021-03-18T07:11:00.880Z [TRACE] plugin.stdio: waiting for stdio data
+2021/03/18 07:11:00 [TRACE] GRPCProvider: Close
+2021-03-18T07:11:00.883Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-03-18T07:11:00.884Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/external/2.1.0/linux_amd64/terraform-provider-external_v2.1.0_x5 pid=2932
+2021-03-18T07:11:00.884Z [DEBUG] plugin: plugin exited
+2021/03/18 07:11:00 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/google"
+2021-03-18T07:11:00.884Z [INFO]  plugin: configuring client automatic mTLS
+2021-03-18T07:11:00.929Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.42.0/linux_amd64/terraform-provider-google_v3.42.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/google/3.42.0/linux_amd64/terraform-provider-google_v3.42.0_x5]
+2021-03-18T07:11:00.931Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.42.0/linux_amd64/terraform-provider-google_v3.42.0_x5 pid=2939
+2021-03-18T07:11:00.931Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.42.0/linux_amd64/terraform-provider-google_v3.42.0_x5
+2021-03-18T07:11:00.952Z [INFO]  plugin.terraform-provider-google_v3.42.0_x5: configuring server automatic mTLS: timestamp=2021-03-18T07:11:00.952Z
+2021-03-18T07:11:00.999Z [DEBUG] plugin.terraform-provider-google_v3.42.0_x5: plugin address: address=/tmp/plugin473762135 network=unix timestamp=2021-03-18T07:11:00.999Z
+2021-03-18T07:11:00.999Z [DEBUG] plugin: using plugin: version=5
+2021/03/18 07:11:01 [TRACE] GRPCProvider: GetSchema
+2021-03-18T07:11:01.079Z [TRACE] plugin.stdio: waiting for stdio data
+2021/03/18 07:11:01 [TRACE] GRPCProvider: Close
+2021-03-18T07:11:01.178Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-03-18T07:11:01.179Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.42.0/linux_amd64/terraform-provider-google_v3.42.0_x5 pid=2939
+2021-03-18T07:11:01.179Z [DEBUG] plugin: plugin exited
+2021/03/18 07:11:01 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/kubernetes"
+2021-03-18T07:11:01.179Z [INFO]  plugin: configuring client automatic mTLS
+2021-03-18T07:11:01.219Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/kubernetes/1.13.3/linux_amd64/terraform-provider-kubernetes_v1.13.3_x4 args=[.terraform/plugins/registry.terraform.io/hashicorp/kubernetes/1.13.3/linux_amd64/terraform-provider-kubernetes_v1.13.3_x4]
+2021-03-18T07:11:01.220Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/kubernetes/1.13.3/linux_amd64/terraform-provider-kubernetes_v1.13.3_x4 pid=2948
+2021-03-18T07:11:01.220Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/kubernetes/1.13.3/linux_amd64/terraform-provider-kubernetes_v1.13.3_x4
+2021-03-18T07:11:01.287Z [INFO]  plugin.terraform-provider-kubernetes_v1.13.3_x4: configuring server automatic mTLS: timestamp=2021-03-18T07:11:01.287Z
+2021-03-18T07:11:01.328Z [DEBUG] plugin.terraform-provider-kubernetes_v1.13.3_x4: plugin address: address=/tmp/plugin176279233 network=unix timestamp=2021-03-18T07:11:01.328Z
+2021-03-18T07:11:01.328Z [DEBUG] plugin: using plugin: version=5
+2021/03/18 07:11:01 [TRACE] GRPCProvider: GetSchema
+2021-03-18T07:11:01.420Z [TRACE] plugin.stdio: waiting for stdio data
+2021/03/18 07:11:01 [TRACE] No provider meta schema returned
+2021/03/18 07:11:01 [TRACE] GRPCProvider: Close
+2021-03-18T07:11:01.531Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-03-18T07:11:01.533Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/kubernetes/1.13.3/linux_amd64/terraform-provider-kubernetes_v1.13.3_x4 pid=2948
+2021-03-18T07:11:01.533Z [DEBUG] plugin: plugin exited
+2021/03/18 07:11:01 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/null"
+2021-03-18T07:11:01.533Z [INFO]  plugin: configuring client automatic mTLS
+2021-03-18T07:11:01.565Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/null/3.1.0/linux_amd64/terraform-provider-null_v3.1.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/null/3.1.0/linux_amd64/terraform-provider-null_v3.1.0_x5]
+2021-03-18T07:11:01.572Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/null/3.1.0/linux_amd64/terraform-provider-null_v3.1.0_x5 pid=2955
+2021-03-18T07:11:01.573Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/null/3.1.0/linux_amd64/terraform-provider-null_v3.1.0_x5
+2021-03-18T07:11:01.583Z [INFO]  plugin.terraform-provider-null_v3.1.0_x5: configuring server automatic mTLS: timestamp=2021-03-18T07:11:01.583Z
+2021-03-18T07:11:01.639Z [DEBUG] plugin.terraform-provider-null_v3.1.0_x5: plugin address: address=/tmp/plugin272265802 network=unix timestamp=2021-03-18T07:11:01.639Z
+2021-03-18T07:11:01.639Z [DEBUG] plugin: using plugin: version=5
+2021/03/18 07:11:01 [TRACE] GRPCProvider: GetSchema
+2021-03-18T07:11:01.712Z [TRACE] plugin.stdio: waiting for stdio data
+2021/03/18 07:11:01 [TRACE] GRPCProvider: Close
+2021-03-18T07:11:01.716Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-03-18T07:11:01.716Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/null/3.1.0/linux_amd64/terraform-provider-null_v3.1.0_x5 pid=2955
+2021-03-18T07:11:01.716Z [DEBUG] plugin: plugin exited
+2021/03/18 07:11:01 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/random"
+2021-03-18T07:11:01.716Z [INFO]  plugin: configuring client automatic mTLS
+2021-03-18T07:11:01.750Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/random/3.1.0/linux_amd64/terraform-provider-random_v3.1.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/random/3.1.0/linux_amd64/terraform-provider-random_v3.1.0_x5]
+2021-03-18T07:11:01.753Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/random/3.1.0/linux_amd64/terraform-provider-random_v3.1.0_x5 pid=2964
+2021-03-18T07:11:01.753Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/random/3.1.0/linux_amd64/terraform-provider-random_v3.1.0_x5
+2021-03-18T07:11:01.765Z [INFO]  plugin.terraform-provider-random_v3.1.0_x5: configuring server automatic mTLS: timestamp=2021-03-18T07:11:01.765Z
+2021-03-18T07:11:01.817Z [DEBUG] plugin.terraform-provider-random_v3.1.0_x5: plugin address: address=/tmp/plugin636668420 network=unix timestamp=2021-03-18T07:11:01.817Z
+2021-03-18T07:11:01.817Z [DEBUG] plugin: using plugin: version=5
+2021/03/18 07:11:01 [TRACE] GRPCProvider: GetSchema
+2021-03-18T07:11:01.891Z [TRACE] plugin.stdio: waiting for stdio data
+2021/03/18 07:11:01 [TRACE] GRPCProvider: Close
+2021-03-18T07:11:01.894Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-03-18T07:11:01.894Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/random/3.1.0/linux_amd64/terraform-provider-random_v3.1.0_x5 pid=2964
+2021-03-18T07:11:01.894Z [DEBUG] plugin: plugin exited
+2021/03/18 07:11:01 [TRACE] LoadSchemas: retrieving schema for provisioner "local-exec"
+2021-03-18T07:11:01.894Z [DEBUG] plugin: starting plugin: path=/usr/local/bin/terraform args=[/usr/local/bin/terraform, internal-plugin, provisioner, local-exec]
+2021-03-18T07:11:01.895Z [DEBUG] plugin: plugin started: path=/usr/local/bin/terraform pid=2971
+2021-03-18T07:11:01.895Z [DEBUG] plugin: waiting for RPC address: path=/usr/local/bin/terraform
+2021-03-18T07:11:01.931Z [DEBUG] plugin: using plugin: version=5
+2021-03-18T07:11:01.934Z [TRACE] plugin.stdio: waiting for stdio data
+2021-03-18T07:11:01.936Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-03-18T07:11:01.938Z [DEBUG] plugin: plugin process exited: path=/usr/local/bin/terraform pid=2971
+2021-03-18T07:11:01.938Z [DEBUG] plugin: plugin exited
+2021/03/18 07:11:01 [TRACE] terraform.NewContext: complete
+2021/03/18 07:11:01 [DEBUG] backend/local: will prompt for input of unset required variables [compute_engine_service_account]
+2021/03/18 07:11:01 [DEBUG] command: asking for input: "var.compute_engine_service_account"
+2021/03/18 07:11:01 [TRACE] terraform.NewContext: starting
+2021/03/18 07:11:01 [TRACE] terraform.NewContext: loading provider schemas
+2021/03/18 07:11:01 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/external"
+2021-03-18T07:11:01.942Z [INFO]  plugin: configuring client automatic mTLS
+2021-03-18T07:11:01.982Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/external/2.1.0/linux_amd64/terraform-provider-external_v2.1.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/external/2.1.0/linux_amd64/terraform-provider-external_v2.1.0_x5]
+2021-03-18T07:11:01.983Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/external/2.1.0/linux_amd64/terraform-provider-external_v2.1.0_x5 pid=2986
+2021-03-18T07:11:01.983Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/external/2.1.0/linux_amd64/terraform-provider-external_v2.1.0_x5
+2021-03-18T07:11:01.990Z [INFO]  plugin.terraform-provider-external_v2.1.0_x5: configuring server automatic mTLS: timestamp=2021-03-18T07:11:01.990Z
+2021/03/18 07:11:02 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/google"
+2021-03-18T07:11:02.037Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/external/2.1.0/linux_amd64/terraform-provider-external_v2.1.0_x5 pid=2986 error="signal: interrupt"
+2021-03-18T07:11:02.037Z [INFO]  plugin: configuring client automatic mTLS
+2021-03-18T07:11:02.070Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.42.0/linux_amd64/terraform-provider-google_v3.42.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/google/3.42.0/linux_amd64/terraform-provider-google_v3.42.0_x5]
+2021-03-18T07:11:02.070Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.42.0/linux_amd64/terraform-provider-google_v3.42.0_x5 pid=2992
+2021-03-18T07:11:02.070Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.42.0/linux_amd64/terraform-provider-google_v3.42.0_x5
+2021-03-18T07:11:02.091Z [INFO]  plugin.terraform-provider-google_v3.42.0_x5: configuring server automatic mTLS: timestamp=2021-03-18T07:11:02.090Z
+2021-03-18T07:11:02.132Z [DEBUG] plugin.terraform-provider-google_v3.42.0_x5: plugin address: address=/tmp/plugin727188705 network=unix timestamp=2021-03-18T07:11:02.132Z
+2021-03-18T07:11:02.132Z [DEBUG] plugin: using plugin: version=5
+2021-03-18T07:11:02.205Z [TRACE] plugin.terraform-provider-google_v3.42.0_x5: plugin received interrupt signal, ignoring: count=1 timestamp=2021-03-18T07:11:02.205Z
+2021/03/18 07:11:02 [TRACE] GRPCProvider: GetSchema
+2021-03-18T07:11:02.216Z [TRACE] plugin.stdio: waiting for stdio data
+2021/03/18 07:11:02 [TRACE] GRPCProvider: Close
+2021-03-18T07:11:02.304Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.42.0/linux_amd64/terraform-provider-google_v3.42.0_x5 pid=2992
+2021-03-18T07:11:02.304Z [DEBUG] plugin: plugin exited
+2021/03/18 07:11:02 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/kubernetes"
+2021-03-18T07:11:02.304Z [INFO]  plugin: configuring client automatic mTLS
+2021-03-18T07:11:02.304Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-03-18T07:11:02.347Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/kubernetes/1.13.3/linux_amd64/terraform-provider-kubernetes_v1.13.3_x4 args=[.terraform/plugins/registry.terraform.io/hashicorp/kubernetes/1.13.3/linux_amd64/terraform-provider-kubernetes_v1.13.3_x4]
+2021-03-18T07:11:02.347Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/kubernetes/1.13.3/linux_amd64/terraform-provider-kubernetes_v1.13.3_x4 pid=2999
+2021-03-18T07:11:02.347Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/kubernetes/1.13.3/linux_amd64/terraform-provider-kubernetes_v1.13.3_x4
+2021/03/18 07:11:02 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/null"
+2021-03-18T07:11:02.355Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/kubernetes/1.13.3/linux_amd64/terraform-provider-kubernetes_v1.13.3_x4 pid=2999 error="signal: interrupt"
+2021-03-18T07:11:02.355Z [INFO]  plugin: configuring client automatic mTLS
+2021-03-18T07:11:02.394Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/null/3.1.0/linux_amd64/terraform-provider-null_v3.1.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/null/3.1.0/linux_amd64/terraform-provider-null_v3.1.0_x5]
+2021-03-18T07:11:02.395Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/null/3.1.0/linux_amd64/terraform-provider-null_v3.1.0_x5 pid=3004
+2021-03-18T07:11:02.395Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/null/3.1.0/linux_amd64/terraform-provider-null_v3.1.0_x5
+2021-03-18T07:11:02.406Z [INFO]  plugin.terraform-provider-null_v3.1.0_x5: configuring server automatic mTLS: timestamp=2021-03-18T07:11:02.406Z
+2021-03-18T07:11:02.458Z [DEBUG] plugin: using plugin: version=5
+2021-03-18T07:11:02.458Z [DEBUG] plugin.terraform-provider-null_v3.1.0_x5: plugin address: address=/tmp/plugin926362718 network=unix timestamp=2021-03-18T07:11:02.458Z
+2021-03-18T07:11:02.485Z [TRACE] plugin.terraform-provider-null_v3.1.0_x5: plugin received interrupt signal, ignoring: count=1 timestamp=2021-03-18T07:11:02.485Z
+2021/03/18 07:11:02 [TRACE] GRPCProvider: GetSchema
+2021-03-18T07:11:02.522Z [TRACE] plugin.stdio: waiting for stdio data
+2021/03/18 07:11:02 [TRACE] GRPCProvider: Close
+2021-03-18T07:11:02.525Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-03-18T07:11:02.525Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/null/3.1.0/linux_amd64/terraform-provider-null_v3.1.0_x5 pid=3004
+2021-03-18T07:11:02.525Z [DEBUG] plugin: plugin exited
+2021/03/18 07:11:02 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/random"
+2021-03-18T07:11:02.526Z [INFO]  plugin: configuring client automatic mTLS
+2021-03-18T07:11:02.568Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/random/3.1.0/linux_amd64/terraform-provider-random_v3.1.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/random/3.1.0/linux_amd64/terraform-provider-random_v3.1.0_x5]
+2021-03-18T07:11:02.568Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/random/3.1.0/linux_amd64/terraform-provider-random_v3.1.0_x5 pid=3011
+2021-03-18T07:11:02.568Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/random/3.1.0/linux_amd64/terraform-provider-random_v3.1.0_x5
+2021-03-18T07:11:02.575Z [INFO]  plugin.terraform-provider-random_v3.1.0_x5: configuring server automatic mTLS: timestamp=2021-03-18T07:11:02.575Z
+2021/03/18 07:11:02 [TRACE] LoadSchemas: retrieving schema for provisioner "local-exec"
+2021-03-18T07:11:02.619Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/random/3.1.0/linux_amd64/terraform-provider-random_v3.1.0_x5 pid=3011 error="signal: interrupt"
+2021-03-18T07:11:02.619Z [DEBUG] plugin: starting plugin: path=/usr/local/bin/terraform args=[/usr/local/bin/terraform, internal-plugin, provisioner, local-exec]
+2021-03-18T07:11:02.620Z [DEBUG] plugin: plugin started: path=/usr/local/bin/terraform pid=3016
+2021-03-18T07:11:02.620Z [DEBUG] plugin: waiting for RPC address: path=/usr/local/bin/terraform
+2021-03-18T07:11:02.656Z [DEBUG] plugin: using plugin: version=5
+2021-03-18T07:11:02.656Z [TRACE] plugin.stdio: waiting for stdio data
+2021-03-18T07:11:02.660Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-03-18T07:11:02.662Z [DEBUG] plugin: plugin process exited: path=/usr/local/bin/terraform pid=3016
+2021-03-18T07:11:02.662Z [DEBUG] plugin: plugin exited
+2021/03/18 07:11:02 [TRACE] backend/local: finished building terraform.Context
+2021/03/18 07:11:02 [TRACE] backend/local: requesting interactive input, if necessary
+2021/03/18 07:11:02 [TRACE] Context.Input: Prompting for provider arguments
+2021/03/18 07:11:02 [TRACE] Context.Input: Provider provider.kubernetes declared at main.tf:24,1-22
+2021/03/18 07:11:02 [TRACE] Context.Input: Provider provider.google declared at providers.tf:1,1-18
+2021/03/18 07:11:02 [TRACE] Context.Input: Input for provider.kubernetes: map[string]cty.Value{}
+2021/03/18 07:11:02 [TRACE] Context.Input: Input for provider.google: map[string]cty.Value{}
+2021/03/18 07:11:02 [TRACE] backend/local: running validation operation
+panic: runtime error: invalid memory address or nil pointer dereference
+[signal SIGSEGV: segmentation violation code=0x1 addr=0x90 pc=0xb20d33]
+
+goroutine 26 [running]:
+github.com/hashicorp/terraform/terraform.(*Context).acquireRun(0x0, 0x26cedf8, 0x8, 0x0)
+	/home/circleci/project/project/terraform/context.go:710 +0x43
+github.com/hashicorp/terraform/terraform.(*Context).Validate(0x0, 0x0, 0x0, 0x0)
+	/home/circleci/project/project/terraform/context.go:656 +0x80
+github.com/hashicorp/terraform/backend/local.(*Local).context(0xc0002d3d40, 0xc0003f4b60, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/home/circleci/project/project/backend/local/backend_local.go:148 +0xbb0
+github.com/hashicorp/terraform/backend/local.(*Local).opPlan(0xc0002d3d40, 0x2ce3260, 0xc0002ff5c0, 0x2ce3260, 0xc0002ff600, 0xc0003f4b60, 0xc0002ff580)
+	/home/circleci/project/project/backend/local/backend_plan.go:72 +0x2c1
+github.com/hashicorp/terraform/backend/local.(*Local).Operation.func1(0xc0001d32f0, 0xc0001d3300, 0xc0001d3310, 0xc0002d3d40, 0xc0001d32e0, 0x2ce3260, 0xc0002ff5c0, 0x2ce3260, 0xc0002ff600, 0xc0003f4b60, ...)
+	/home/circleci/project/project/backend/local/backend.go:340 +0xe8
+created by github.com/hashicorp/terraform/backend/local.(*Local).Operation
+	/home/circleci/project/project/backend/local/backend.go:334 +0x366

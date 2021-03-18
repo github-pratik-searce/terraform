@@ -18,10 +18,6 @@ locals {
   cluster_type = "gke-us-east4-applications-hub-01"
 }
 
-##provider "google" {
-  ##version = "~> 3.42.0"
-##  region  = var.region
-##}
 
 data "google_client_config" "default" {}
 
@@ -38,9 +34,15 @@ data "google_compute_subnetwork" "subnetwork" {
   region  = var.region
 }
 
+module "service_account" {
+  source = "./../iam"
+
+}
+
 module "gke" {
   source                    = "terraform-google-modules/kubernetes-engine/google//modules/private-cluster"
   project_id                = var.project_id
+  version                   = "14.0.1"
   name                      = "${local.cluster_type}-cluster${var.cluster_name_suffix}"
   regional                  = true
   region                    = var.region
@@ -49,12 +51,13 @@ module "gke" {
   ip_range_pods             = var.ip_range_pods
   ip_range_services         = var.ip_range_services
   create_service_account    = false
-  service_account           = var.compute_engine_service_account
+  service_account           = service_account.email
   enable_private_endpoint   = true
   enable_private_nodes      = true
-  master_ipv4_cidr_block    = "10.140.16.0/28"
+  master_ipv4_cidr_block    = "10.140.18.0/28"
   default_max_pods_per_node = 50
   remove_default_node_pool  = true
+  depends_on                = [module.service_account]
 
   node_pools = [
     {
@@ -62,71 +65,34 @@ module "gke" {
       min_count         = 1
       max_count         = 2
       local_ssd_count   = 0
-      machine_type      = "n2-standard-2"
+      machine_type      = "e2-small"
       disk_size_gb      = 100
       disk_type         = "pd-standard"
       image_type        = "COS"
       auto_repair       = true
       auto_upgrade      = true
-      service_account   = var.compute_engine_service_account
+      service_account   = service_account.email
       preemptible       = true
-      max_pods_per_node = 12
-    },
-    {
-      name              = "platform-premp-1"
-      min_count         = 2
-      max_count         = 4
-      local_ssd_count   = 0
-      machine_type      = "n2-standard-2"
-      disk_size_gb      = 100
-      disk_type         = "pd-standard"
-      image_type        = "COS"
-      auto_repair       = true
-      auto_upgrade      = true
-      service_account   = var.compute_engine_service_account
-      preemptible       = false
-      max_pods_per_node = 12
-    },
+      max_pods_per_node = 3
+    }
 
-   {
-      name              = "generics-normal-1"
-      min_count         = 1
-      max_count         = 2
-      local_ssd_count   = 0
-      machine_type      = "n2-standard-2"
-      disk_size_gb      = 100
-      disk_type         = "pd-standard"
-      image_type        = "COS"
-      auto_repair       = true
-      auto_upgrade      = true
-      service_account   = var.compute_engine_service_account
-      preemptible       = false
-      max_pods_per_node = 12
-    },
-
-{
-      name              = "generics-premp-1"
-      min_count         = 2
-      max_count         = 4
-      local_ssd_count   = 0
-      machine_type      = "n2-standard-2"
-      disk_size_gb      = 100
-      disk_type         = "pd-standard"
-      image_type        = "COS"
-      auto_repair       = true
-      auto_upgrade      = true
-      service_account   = var.compute_engine_service_account
-      preemptible       = false
-      max_pods_per_node = 12
-    },
-
- 
   ]
 
   master_authorized_networks = [
     {
-      cidr_block   = data.google_compute_subnetwork.subnetwork.ip_cidr_range
+      cidr_block   = var.subnet_cidr
       display_name = "VPC"
     },
+
+    {
+      cidr_block   = "35.235.240.0/20"
+      display_name = "IAP-range"
+    },
+
+    {
+      cidr_block   = "34.87.13.161/32"
+      display_name = "Cloud-shell-range"
+    },
   ]
+
 }

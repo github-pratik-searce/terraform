@@ -46,3 +46,7 @@ variable "compute_engine_service_account" {
   description = "Service account to associate to the nodes in the cluster"
 }
 
+variable "subnet_cidr" {
+  default = "10.13.0.0/20"
+
+}
